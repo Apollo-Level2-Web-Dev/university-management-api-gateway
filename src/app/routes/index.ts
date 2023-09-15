@@ -40,34 +40,34 @@ const moduleRoutes = [
         path: '/courses',
         routes: courseRoutes
     },
-    {
-        path: '/semester-registrations',
-        routes: semesterRegistrationRoutes
-    },
-    {
-        path: '/offered-courses',
-        routes: offeredCourseRoutes
-    },
-    {
-        path: '/offered-course-sections',
-        routes: offeredCourseSectionRoutes
-    },
-    {
-        path: '/offered-course-class-schedules',
-        routes: offeredCourseClassScheduleRoutes
-    },
-    {
-        path: '/student-enrolled-courses',
-        routes: studentEnrolledCourseRoutes
-    },
-    {
-        path: '/student-enrolled-course-marks',
-        routes: studentEnrolledCourseMarkRoutes
-    },
-    {
-        path: '/student-semester-payments',
-        routes: studentSemesterPaymentRoutes
-    }
+    // {
+    //     path: '/semester-registrations',
+    //     routes: semesterRegistrationRoutes
+    // },
+    // {
+    //     path: '/offered-courses',
+    //     routes: offeredCourseRoutes
+    // },
+    // {
+    //     path: '/offered-course-sections',
+    //     routes: offeredCourseSectionRoutes
+    // },
+    // {
+    //     path: '/offered-course-class-schedules',
+    //     routes: offeredCourseClassScheduleRoutes
+    // },
+    // {
+    //     path: '/student-enrolled-courses',
+    //     routes: studentEnrolledCourseRoutes
+    // },
+    // {
+    //     path: '/student-enrolled-course-marks',
+    //     routes: studentEnrolledCourseMarkRoutes
+    // },
+    // {
+    //     path: '/student-semester-payments',
+    //     routes: studentSemesterPaymentRoutes
+    // }
 ];
 
 moduleRoutes.forEach((route) => {
