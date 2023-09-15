@@ -1,9 +1,9 @@
 import { Request } from 'express';
 import { IGenericResponse } from '../../../interfaces/common';
-import { CoreHttpService } from '../../../shared/axios';
+import { CoreService } from '../../../shared/axios';
 
 const getAllFromDB = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.get('/rooms', {
+  const response: IGenericResponse = await CoreService.get('/rooms', {
     params: req.query,
     headers: {
       Authorization: req.headers.authorization
@@ -14,7 +14,7 @@ const getAllFromDB = async (req: Request): Promise<IGenericResponse> => {
 
 const getByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
   const { id } = req.params;
-  const response: IGenericResponse = await CoreHttpService.get(`/rooms/${id}`, {
+  const response: IGenericResponse = await CoreService.get(`/rooms/${id}`, {
     headers: {
       Authorization: req.headers.authorization
     }
@@ -23,7 +23,7 @@ const getByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
 };
 
 const insertIntoDB = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.post(`/rooms`, req.body, {
+  const response: IGenericResponse = await CoreService.post(`/rooms`, req.body, {
     headers: {
       Authorization: req.headers.authorization
     }
@@ -33,7 +33,7 @@ const insertIntoDB = async (req: Request): Promise<IGenericResponse> => {
 
 const updateOneInDB = async (req: Request): Promise<IGenericResponse> => {
   const { id } = req.params;
-  const response: IGenericResponse = await CoreHttpService.patch(`/rooms/${id}`, req.body, {
+  const response: IGenericResponse = await CoreService.patch(`/rooms/${id}`, req.body, {
     headers: {
       Authorization: req.headers.authorization
     }
@@ -43,7 +43,7 @@ const updateOneInDB = async (req: Request): Promise<IGenericResponse> => {
 
 const deleteByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
   const { id } = req.params;
-  const response: IGenericResponse = await CoreHttpService.delete(`/rooms/${id}`, {
+  const response: IGenericResponse = await CoreService.delete(`/rooms/${id}`, {
     headers: {
       Authorization: req.headers.authorization
     }
