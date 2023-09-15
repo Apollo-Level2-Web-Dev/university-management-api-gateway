@@ -60,14 +60,14 @@ const moduleRoutes = [
         path: '/student-enrolled-courses',
         routes: studentEnrolledCourseRoutes
     },
-    // {
-    //     path: '/student-enrolled-course-marks',
-    //     routes: studentEnrolledCourseMarkRoutes
-    // },
-    // {
-    //     path: '/student-semester-payments',
-    //     routes: studentSemesterPaymentRoutes
-    // }
+    {
+        path: '/student-enrolled-course-marks',
+        routes: studentEnrolledCourseMarkRoutes
+    },
+    {
+        path: '/student-semester-payments',
+        routes: studentSemesterPaymentRoutes
+    }
 ];
 
 moduleRoutes.forEach((route) => {
