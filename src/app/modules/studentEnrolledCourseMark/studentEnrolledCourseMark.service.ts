@@ -1,9 +1,9 @@
 import { Request } from 'express';
 import { IGenericResponse } from '../../../interfaces/common';
-import { CoreHttpService } from '../../../shared/axios';
+import { CoreService } from '../../../shared/axios';
 
 const getAllFromDB = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.get('/student-enrolled-course-marks', {
+  const response: IGenericResponse = await CoreService.get('/student-enrolled-course-marks', {
     params: req.query,
     headers: {
       Authorization: req.headers.authorization
@@ -13,7 +13,7 @@ const getAllFromDB = async (req: Request): Promise<IGenericResponse> => {
 };
 
 const getStudentMarks = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.get(
+  const response: IGenericResponse = await CoreService.get(
     '/student-enrolled-course-marks/my-marks',
     {
       params: req.query,
@@ -26,7 +26,7 @@ const getStudentMarks = async (req: Request): Promise<IGenericResponse> => {
 };
 
 const updateMarks = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.post(
+  const response: IGenericResponse = await CoreService.post(
     `/student-enrolled-course-marks/update-marks`,
     req.body,
     {
@@ -39,8 +39,8 @@ const updateMarks = async (req: Request): Promise<IGenericResponse> => {
 };
 
 const updateCourseFinalMarks = async (req: Request): Promise<IGenericResponse> => {
-  const response: IGenericResponse = await CoreHttpService.post(
-    `/student-enrolled-course-marks/update-course-final-marks`,
+  const response: IGenericResponse = await CoreService.post(
+    `/student-enrolled-course-marks/update-final-marks`,
     req.body,
     {
       headers: {

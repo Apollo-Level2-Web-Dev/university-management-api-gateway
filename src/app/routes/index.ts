@@ -44,22 +44,22 @@ const moduleRoutes = [
         path: '/semester-registrations',
         routes: semesterRegistrationRoutes
     },
-    // {
-    //     path: '/offered-courses',
-    //     routes: offeredCourseRoutes
-    // },
-    // {
-    //     path: '/offered-course-sections',
-    //     routes: offeredCourseSectionRoutes
-    // },
-    // {
-    //     path: '/offered-course-class-schedules',
-    //     routes: offeredCourseClassScheduleRoutes
-    // },
-    // {
-    //     path: '/student-enrolled-courses',
-    //     routes: studentEnrolledCourseRoutes
-    // },
+    {
+        path: '/offered-courses',
+        routes: offeredCourseRoutes
+    },
+    {
+        path: '/offered-course-sections',
+        routes: offeredCourseSectionRoutes
+    },
+    {
+        path: '/offered-course-class-schedules',
+        routes: offeredCourseClassScheduleRoutes
+    },
+    {
+        path: '/student-enrolled-courses',
+        routes: studentEnrolledCourseRoutes
+    },
     // {
     //     path: '/student-enrolled-course-marks',
     //     routes: studentEnrolledCourseMarkRoutes
