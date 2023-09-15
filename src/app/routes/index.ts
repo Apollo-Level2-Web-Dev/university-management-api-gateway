@@ -40,10 +40,10 @@ const moduleRoutes = [
         path: '/courses',
         routes: courseRoutes
     },
-    // {
-    //     path: '/semester-registrations',
-    //     routes: semesterRegistrationRoutes
-    // },
+    {
+        path: '/semester-registrations',
+        routes: semesterRegistrationRoutes
+    },
     // {
     //     path: '/offered-courses',
     //     routes: offeredCourseRoutes
