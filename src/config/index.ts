@@ -13,7 +13,10 @@ const envVarsZodSchema = z.object({
     JWT_SECRET: z.string(),
     REDIS_URL: z.string(),
     AUTH_SERVICE_URL: z.string(),
-    CORE_SERVICE_URL: z.string()
+    CORE_SERVICE_URL: z.string(),
+    CLOUDINARY_CLOUD_NAME: z.string(),
+    CLOUDINARY_API_KEY: z.string(),
+    CLOUDINARY_API_SECRET: z.string()
 });
 
 const envVars = envVarsZodSchema.parse(process.env);
@@ -28,5 +31,10 @@ export default {
         url: envVars.REDIS_URL
     },
     authServiceUrl: envVars.AUTH_SERVICE_URL,
-    coreServiceUrl: envVars.CORE_SERVICE_URL
+    coreServiceUrl: envVars.CORE_SERVICE_URL,
+    cloudinary: {
+        cloudName: envVars.CLOUDINARY_CLOUD_NAME,
+        apiKey: envVars.CLOUDINARY_API_KEY,
+        apiSecret: envVars.CLOUDINARY_API_SECRET
+    }
 };
