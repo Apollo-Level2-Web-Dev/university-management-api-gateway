@@ -76,7 +76,26 @@ const createFaculty = async (req: Request): Promise<IGenericResponse> => {
     return response;
 };
 
+const createAdmin = async (req: Request): Promise<IGenericResponse> => {
+    const file = req.file as IUploadFile;
+
+    const uploadedProfileImage = await FileUploadHelper.uploadToCloudinary(file);
+
+    if (uploadedProfileImage) {
+        req.body.admin.profileImage = uploadedProfileImage.secure_url;
+    }
+
+    const response: IGenericResponse = await AuthService.post('/users/create-admin', req.body, {
+        headers: {
+            Authorization: req.headers.authorization
+        }
+    });
+    return response;
+};
+
+
 export const UserService = {
     createStudent,
-    createFaculty
+    createFaculty,
+    createAdmin
 }
