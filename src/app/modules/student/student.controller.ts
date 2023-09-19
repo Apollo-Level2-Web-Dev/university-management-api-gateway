@@ -58,6 +58,7 @@ const getStudentProfile = async (req: Request, res: Response, next: NextFunction
 
 const updateOneInDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log("controller")
     const result = await StudentService.updateOneInDB(req);
     sendResponse(res, result);
   } catch (error) {
