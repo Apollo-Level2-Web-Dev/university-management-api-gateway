@@ -73,5 +73,11 @@ const deleteByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
 };
 
 export const FacultyService = {
-    updateOneInDB
+    updateOneInDB,
+    getAllFromDB,
+    getByIdFromDB,
+    getMyCourses,
+    getFacultyProfile,
+    getMyCourseStudents,
+    deleteByIdFromDB
 }
