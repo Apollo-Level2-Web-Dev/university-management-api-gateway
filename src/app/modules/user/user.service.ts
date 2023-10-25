@@ -15,6 +15,7 @@ const createStudent = async (req: Request) => {
     const { academicDepartment, academicFaculty, academicSemester } = req.body.student
 
     const academicDepartmentResponse = await AuthService.get(`/academic-departments?syncId=${academicDepartment}`)
+    console.log(academicDepartmentResponse)
 
     if (academicDepartmentResponse.data && Array.isArray(academicDepartmentResponse.data)) {
         req.body.student.academicDepartment = academicDepartmentResponse.data[0].id
